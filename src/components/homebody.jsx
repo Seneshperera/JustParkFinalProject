@@ -1,7 +1,15 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import Home from '../assets/home.png'
 
 const homebody = () => {
+  const navigate = useNavigate()
+
+  const handleSearch = (e) => {
+    e.preventDefault()
+    navigate('/search')
+  }
+
   return (
     <div className='w-full h-auto flex flex-row'>
       <div className='flex flex-col w-1/2 mt-20'>
@@ -9,7 +17,7 @@ const homebody = () => {
             <h1 className='text-5xl font-sans font-bold text-[#050038]'>Better than searching, best with <span style={{ color: '#33A21F' }}>booking</span>,park smart <span style={{ color: '#33A21F' }}>in seconds.</span></h1>
         </div>
         <div className='max-w-[500px] border flex flex-col border-[#33A21F] rounded-3xl p-6 mx-16 mt-10'>
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={handleSearch}>
                 <input
                 type="text"
                 placeholder="Enter the place or postal code..."
@@ -47,7 +55,7 @@ const homebody = () => {
             <img src={Home} alt="home" className='mt-10 object-cover' />
           </div>
 
-            <p>Skip the hassle of finding parking! JustPark.lk lets you reserve your spot instantly—whether for daily commutes, events, or long stays. Enjoy real-time availability, secure payments, and guaranteed parking at the best locations. Book online, park stress-free!
+            <p>Skip the hassle of finding parking! JustPark.lk lets you reserve your spot instantly—whether for daily commutes, events, or long stays. Enjoy real-time availability, secure payments, and guaranteed parking at the best locations. Book online, park stress-free!
 </p>
         </div>
 

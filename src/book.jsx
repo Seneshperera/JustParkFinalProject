@@ -1,14 +1,14 @@
 import React from 'react'
 import Navbar from './components/navbar.jsx'
-import Body from './components/homebody.jsx'
+import Booking from './components/Driver/booking.jsx'
 
-const Home = () => {
+const home = () => {
   return (
     <div className='bg-white h-screen max-w-screen-2xl'>
         <Navbar/>
-        <Body/>
+        <Booking/>
     </div>
   )
 }
 
-export default Home
+export default home
