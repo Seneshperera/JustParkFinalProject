@@ -5,6 +5,7 @@ import Search from './search.jsx'
 import Booking from './components/Driver/booking.jsx'
 import Drivergateway from './Drivergateway.jsx'
 import Driverpg from './components/Driver/Driverpg.jsx'
+import BookS from './BookS.jsx'
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/booking" element={<Booking />} />
         <Route path="/Drivergateway" element={<Drivergateway />} />
         <Route path="/driverpg" element={<Driverpg />} />
+        <Route path="/bookingsuccess" element={<BookS />} />
       </Routes>
     </div>
   )

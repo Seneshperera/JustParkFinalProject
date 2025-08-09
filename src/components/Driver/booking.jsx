@@ -59,7 +59,7 @@ const Booking = () => {
       return;
     }
     
-    // Navigate to driverpg page after confirming payment
+    // Navigate to driverpg page for payment processing
     navigate('/driverpg');
   };
 

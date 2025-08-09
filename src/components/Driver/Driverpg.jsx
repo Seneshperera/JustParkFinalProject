@@ -3,10 +3,7 @@ import { useNavigate } from 'react-router-dom'
 
 const Driverpg = () => {
   
-  const navigate = (path) => {
-    console.log(`Navigating to: ${path}`)
-    alert(`Would navigate to: ${path}`)
-  }
+  const navigate = useNavigate()
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState('card')
   const [formData, setFormData] = useState({
     cardNumber: '',
@@ -64,7 +61,7 @@ const Driverpg = () => {
     setTimeout(() => {
       setIsProcessing(false)
       // Navigate to success page or back to search
-      navigate('/booking-success')
+      navigate('/bookingsuccess')
     }, 3000)
   }
 
@@ -75,7 +72,7 @@ const Driverpg = () => {
         <div className='max-w-7xl mx-auto flex items-center justify-between'>
           <div className='flex items-center space-x-4'>
             <button 
-              onClick={() => navigate(-1)}
+              onClick={() => navigate('/booking')}
               className='text-gray-600 hover:text-gray-800 transition-colors'
             >
               ← Back
