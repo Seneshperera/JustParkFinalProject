@@ -243,6 +243,20 @@ const Driverpg = () => {
                     placeholder="+94 77 123 4567"
                   />
                 </div>
+                <div>
+                  <label className='block text-sm font-medium text-gray-700 mb-2'>
+                    Car Number Plate Number
+                  </label>
+
+                  <input
+                   type="Varchar" 
+                   name='carNumberPlate'
+                    value={formData.carNumberPlate}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-[#33A21F]"
+                    placeholder="ABC 1234"
+                   />
+                </div>              
               </div>
             </div>
 
